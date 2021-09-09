@@ -1,37 +1,72 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/aakarshak-nandwani/coursera-test/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+# OHLC Engine
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This project was made using:
+- Python 
+- Streamlit 
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+## Acknowledgements
 
-1. Numbered
-2. List
+- [JSON to CSV file conversion](https://www.geeksforgeeks.org/convert-json-to-csv-in-python/)
+- [OHCL Charts using plotly](https://plotly.com/python/ohlc-charts/)
+- [How to use IEX cloud](https://www.youtube.com/watch?v=_INKBveSVec)
+- [How to create a Streamlit Dashboard](https://www.youtube.com/watch?v=tx6bT2Sh9R8)
 
-**Bold** and _Italic_ and `Code` text
+  
+## API Reference
 
-[Link](url) and ![Image](src)
+#### Get all items
+
+```http
+  GET /api/items
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | **Required**. Your API key |
 
-### Jekyll Themes
+#### Get item
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/aakarshak-nandwani/coursera-test/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```http
+  GET /api/items/${id}
+```
 
-### Support or Contact
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+#### add(num1, num2)
+
+Takes two numbers and returns the sum.
+
+  
+## Contributors
+
+- Aakarshak Nandwani - aakarshak8@gmail.com
+- Dhruva Patel - dhruvapatel.2501@gmail.com
+- Dhvanil Patel - dhvanilpatel23@gmail.com
+- Vaibhav Patel - vaibhavpatel1855@gmail.com
+- Lakshita Jain - lakshitajain0809@gmail.com
+- Khooshali Kapopara - khooshali.kapopara@gmail.com
+
+  
+## Deployment
+
+Pre-requisites to deploy this project 
+
+```bash
+pip install streamlit
+pip install pandas 
+pip install plotly 
+```
+## Setup & Run 
+
+- Install the required packages and download the complete folder. 
+- Run app.py file using the following command in command line within the folder in which you cloned the repository.
+
+```bash
+streamlit run app.py 
